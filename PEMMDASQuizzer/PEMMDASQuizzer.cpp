@@ -88,6 +88,12 @@ double modulusQuiz() {
     return percent;
 }
 
+/*  The function should:
+    Ask user how many problems they would like to solve.
+    Implement a quiz for PEMMDAS-- give the user about 9 random integers between 1 and 20, separated by random arithmetic operators, and have the user solve the problem.
+    Check if the user is correct.
+    Return the percentage of right answers.
+*/
 double pemmdasQuiz() {
 
 
