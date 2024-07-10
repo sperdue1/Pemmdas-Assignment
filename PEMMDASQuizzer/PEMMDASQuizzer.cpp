@@ -1,5 +1,6 @@
-/* 
-Contains Modulus Quizzer and PEMMDAS Quizzer
+/*  NAME: Kody Perdue
+    CS2 with Baarsch
+    Contains Modulus Quizzer and PEMMDAS Quizzer
 */
 
 #include <iostream>
