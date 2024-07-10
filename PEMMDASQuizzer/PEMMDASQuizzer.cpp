@@ -2,15 +2,12 @@
 Contains Modulus Quizzer and PEMMDAS Quizzer
 */
 
-
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <string>
 using namespace std;
-
-
 
 double modulusQuiz();
 double pemmdasQuiz();
@@ -91,14 +88,51 @@ double modulusQuiz() {
 /*  The function should:
     Ask user how many problems they would like to solve.
     Implement a quiz for PEMMDAS-- give the user about 9 random integers between 1 and 20, separated by random arithmetic operators, and have the user solve the problem.
-    Check if the user is correct.
-    Return the percentage of right answers.
+    return zero
 */
 double pemmdasQuiz() {
+    int times = 0;
+    cout << "How many problems would you like to solve?" << endl;
+    cin >> times;
 
+    while (times > 0) {
 
+        //the 9 randomly generated numbers
+        int num1 = rand() % 20 + 1;
+        int num2 = rand() % 20 + 1;
+        int num3 = rand() % 20 + 1;
+        int num4 = rand() % 20 + 1;
+        int num5 = rand() % 20 + 1;
+        int num6 = rand() % 20 + 1;
+        int num7 = rand() % 20 + 1;
+        int num8 = rand() % 20 + 1;
+        int num9 = rand() % 20 + 1;
+        
+        //operators array
+        char operators[] = { '+', '-', '*', '/', '%' };
+        
+        //the 8 randomly generated operators using the operators array
+        char op1 = operators[rand() % 5];
+        char op2 = operators[rand() % 5];
+        char op3 = operators[rand() % 5];
+        char op4 = operators[rand() % 5];
+        char op5 = operators[rand() % 5];
+        char op6 = operators[rand() % 5];
+        char op7 = operators[rand() % 5];
+        char op8 = operators[rand() % 5];
 
+        double answer = 0.0;
+        
+        //printing the problem to be solved
+        cout << "Solve the following:" << endl << num1 << " " << op1 << " " << num2 << " " << op2 << " " << num3 << " " <<
+            op3 << " " << num4 << " " << op4 << " " << num5 << " " << op5 << " " << num6 << " " << op6 << " " << num7 << " " <<
+            op7 << " " << num8 << " " << op8 << " " << num9 << endl;
 
+        //submitting an answer
+        cin >> answer;
+
+        times--;
+    }
     return 0;
 }
 
@@ -115,7 +149,5 @@ void printScores(vector<double> modulus, vector<double> pemmdas) {
         cout << modCount << ":\t" << percent << endl;
         modCount++;
     }
-
-
 
 }
